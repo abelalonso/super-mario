@@ -5,7 +5,7 @@ function Player(game){
 
     //physical properties
     this.x = 100;
-    this.y = 250;
+    this.y = 50;
     this.width = 120;
     this.height = 90;
     this.dy = 0;
@@ -47,10 +47,10 @@ Player.prototype.move = function(delta){
         }
     }.bind(this);
 
-    $(canvas).on("mousedown", function(){
+    $(canvas).on("touchstart", function(){
         this.pressed = true
     }.bind(this));
-    $(canvas).on("mouseup", function(){
+    $(canvas).on("touchend", function(){
         this.pressed = false;
     }.bind(this));
 } 
